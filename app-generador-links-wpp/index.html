@@ -90,37 +90,6 @@
         <button class="copy-btn" onclick="copiarLink('linkWebInput')">Copiar</button>
     </div>
 
-    <script>
-        function generarLink() {
-            let numero = document.getElementById("numero").value;
-            let mensaje = encodeURIComponent(document.getElementById("mensaje").value);
-            if (numero) {
-                let url = `https://wa.me/${numero}?text=${mensaje}`;
-                document.getElementById("linkInput").value = url;
-                document.getElementById("linkContainer").style.display = "block";
-            } else {
-                alert("Por favor, ingresa un número de teléfono válido.");
-            }
-        }
-
-        function generarLinkWeb() {
-            let numero = document.getElementById("numero").value;
-            let mensaje = encodeURIComponent(document.getElementById("mensaje").value);
-            if (numero) {
-                let url = `https://web.whatsapp.com/send?phone=${numero}&text=${mensaje}`;
-                document.getElementById("linkWebInput").value = url;
-                document.getElementById("linkWebContainer").style.display = "block";
-            } else {
-                alert("Por favor, ingresa un número de teléfono válido.");
-            }
-        }
-
-        function copiarLink(id) {
-            let input = document.getElementById(id);
-            input.select();
-            document.execCommand("copy");
-            alert("Link copiado al portapapeles.");
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
