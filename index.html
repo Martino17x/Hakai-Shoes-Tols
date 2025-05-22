@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css">
+  <title>Cotizador de Precios</title>
+</head>
+<body>
+
+  <div class="container-btn">
+    <div class="buttons">
+      <button class="btn-cotizador">Cotizador de Precios</button>
+      <a href="app-generador-links-wpp/index.html" class="btn-generador-links">Generador Links WhatsApp</a>
+    </div>
+  </div>
+
+  <section class="cotizador-precios">
+    <h2>Cotizador de Precios</h2>
+
+    <label for="precioCompra">Precio de compra ($):</label>
+    <input type="number" id="precioCompra" />
+
+    <label for="precioVenta">Precio de venta ($):</label>
+    <input type="number" id="precioVenta" />
+
+    <label for="porcentajeVentaDeseado">Porcentaje deseado de ganancia (%):</label>
+    <input type="number" id="porcentajeVentaDeseado" step="0.01" />
+
+    <label for="precioEnvio">Precio del envío ($):</label>
+    <input type="number" id="precioEnvio" />
+
+    <label for="costosAdicionales">Costos adicionales ($):</label>
+    <input type="number" id="costosAdicionales" />
+
+    <label for="costosAdicionalesPorcentaje">Costos adicionales (%) sobre el precio de compra:</label>
+    <input type="number" id="costosAdicionalesPorcentaje" step="0.01" />
+
+
+    <div class="resultado">
+      <p>Ganancia neta: $<span id="gananciaPesos">0.00</span></p>
+      <p>Margen de ganancia: <span id="gananciaPorcentaje">0.00%</span></p>
+      <p>Markup (recargo sobre el costo): <span id="markupPorcentaje">0.00%</span></p>
+      <p><strong>Precio final (real):</strong> $<span id="precioFinal"></span></p>
+      <p><strong>Precio final de venta:</strong> $<span id="precioVentaFinal"></span></p>
+      <p><strong>Precio de venta sugerido por porcentaje:</strong> $<span id="precioVentaPorPorcentaje">0.00</span></p>
+
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
